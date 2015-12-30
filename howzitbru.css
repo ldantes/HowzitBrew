@@ -1,0 +1,231 @@
+/* CSS declarations go here */
+body {
+  font-family: sans-serif;
+  background-color: #f2d079;
+  background-image: linear-gradient(to bottom, #f2d079, #9c570e 100%);
+  background-attachment: fixed;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0;
+  margin: 0;
+
+  font-size: 14px;
+}
+
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+header {
+  padding: 20px 15px 15px 15px;
+  position: relative;
+  background: transparent;
+}
+
+#login-buttons {
+  display: block;
+}
+
+h1 {
+  font-size: 1.5em;
+  color: #753d05;
+  margin: 0;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 45%;
+}
+
+.batch ul {
+  margin: 0;
+  padding: 0;
+}
+
+.batch li {
+  position: relative;
+  list-style: none;
+  padding: 5px;
+  border-bottom: #eee solid 1px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  margin: 0px 0px 5px 0px;
+  border: 5px solid #f2d079;
+}
+
+.userName{
+  float: left;
+  font-weight: bold;
+  background: #f2d079;
+  border: 5px solid #f2d079;
+  font-size: 1em;
+  position: relative;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.timeStamp{
+  float: right;
+  font-weight: bold;
+  background: #f2d079;
+  border: 5px solid #f2d079;
+  font-size: 1em;
+  position: relative;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.form-style{
+    max-width: 450px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style label{
+    display:block;
+    margin-bottom: 10px;
+}
+.form-style label > span{
+    float: left;
+    width: 100px;
+    color: #F072A9;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.form-style fieldset{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid #FFD2D2;
+    padding: 20px;
+    background: #FFF4F4;
+    box-shadow: inset 0px 0px 15px #FFE5E5;
+    -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+    -webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+
+.form-style fieldset legend{
+    color: #FFA0C9;
+    border-top: 1px solid #FFD2D2;
+    border-left: 1px solid #FFD2D2;
+    border-right: 1px solid #FFD2D2;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    background: #FFF4F4;
+    padding: 0px 8px 3px 8px;
+    box-shadow: -0px -1px 2px #F1F1F1;
+    -moz-box-shadow:-0px -1px 2px #F1F1F1;
+    -webkit-box-shadow:-0px -1px 2px #F1F1F1;
+    font-weight: normal;
+    font-size: 12px;
+}
+.form-style textarea{
+    width:250px;
+    height:100px;
+}
+.form-style input[type=text],
+.form-style input[type=date],
+.form-style input[type=datetime],
+.form-style input[type=number],
+.form-style input[type=search],
+.form-style input[type=time],
+.form-style input[type=url],
+.form-style input[type=email],
+.form-style select,
+.form-style textarea{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 1px solid #FFC2DC;
+    outline: none;
+    color: #F072A9;
+    padding: 5px 8px 5px 8px;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+    -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+    background: #FFEFF6;
+    width:50%;
+}
+.form-style  input[type=submit],
+.form-style  input[type=button]{
+    background: #C94A81;
+    border: 1px solid #C94A81;
+    padding: 5px 15px 5px 15px;
+    color: #FFCBE2;
+    box-shadow: inset -1px -1px 3px #FF62A7;
+    -moz-box-shadow: inset -1px -1px 3px #FF62A7;
+    -webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+    border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font-weight: bold;
+}
+.required{
+    color:red;
+    font-weight:normal;
+}
+
+.delete {
+  float: right;
+  font-weight: bold;
+  background: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  opacity: 0.5;
+}
+
+li {
+  position: relative;
+  list-style: none;
+  padding: 15px;
+  border-bottom: #eee solid 1px;
+}
+
+li .text {
+  margin-left: 10px;
+}
+
+li.checked {
+  color: #888;
+}
+
+li.checked .text {
+  text-decoration: line-through;
+}
+
+li.private {
+  background: #eee;
+  border-color: #ddd;
+}
+
+header .hide-completed {
+  float: right;
+}
+
+.toggle-private {
+  margin-left: 5px;
+}
+
+@media (max-width: 600px) {
+  li {
+    padding: 12px 15px;
+  }
+
+  .search {
+    width: 150px;
+    clear: both;
+  }
+
+}
