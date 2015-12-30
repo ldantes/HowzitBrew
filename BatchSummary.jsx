@@ -13,7 +13,8 @@ BatchSummary = React.createClass({
  },
 
   deleteBatch() {
-    Batches.remove(this.props.batch._id);
+    Meteor.call("removeBatch", this.props.batch._id);
+
     swal("Deleted!",
     "Your batch is down the drain!",
     "success");
@@ -50,11 +51,13 @@ BatchSummary = React.createClass({
     return (
         <li>
           <div>
-          <ReactRouter.Link to="batch" params={{batchId: this.props.batch.user}}>
+
           <span className="userName">{this.props.batch.user}</span>
           <span className="timeStamp">{this.dateDifference(new Date(), new Date (this.props.batch.startDate))} Days Ago </span>
           <br/>
-              <h3>{this.props.batch.name} ({this.props.batch.style})</h3>
+              <h3>
+              <ReactRouter.Link to="batch" params={{batchId: this.props.batch.user}}>{this.props.batch.name} </ReactRouter.Link>
+              ({this.props.batch.style})</h3>
               <button className="delete" onClick={() => this.confirmDelete()}>
                 Delete
               </button>
@@ -62,7 +65,7 @@ BatchSummary = React.createClass({
 
 
               <h4>{this.props.batch.startDate}</h4>
-          </ReactRouter.Link>
+
           </div>
 
         </li>

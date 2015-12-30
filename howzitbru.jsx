@@ -15,6 +15,8 @@ if (Meteor.isClient) {
    passwordSignupFields: "USERNAME_AND_EMAIL"
  });
 
+  Meteor.subscribe("batches");
+
   Meteor.startup(function () {
     // Use Meteor.startup to render the component after the page is ready
     //React.render(<App />, document.getElementById("render-target"));
@@ -32,3 +34,34 @@ if (Meteor.isClient) {
   ReactRouterSSR.Run(AppRoutes);
   });
 }
+
+if (Meteor.isServer) {
+  Meteor.publish("batches", function () {
+    return Batches.find();
+  });
+}
+
+Meteor.methods({
+  addBatch(batch) {
+    // Make sure the user is logged in before inserting a task
+    if (! Meteor.userId()) {
+      throw new Meteor.Error("not-authorized");
+    }
+
+    Batches.insert({
+      name: batch.batchname,
+      style: batch.style,
+      user: Meteor.user().username,
+      startDate: batch.startDate
+    });
+  },
+
+  removeBatch(batchId) {
+    Batches.remove(batchId);
+  },
+
+  getBatch(batchId){
+    return Batches.find();
+  }
+
+});

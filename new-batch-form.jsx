@@ -8,15 +8,12 @@ handleSubmit(event) {
   event.preventDefault();
 
   // Find the text field via the React ref
-  var batchname = React.findDOMNode(this.refs.batchname).value.trim();
-  var style = React.findDOMNode(this.refs.style).value.trim();
-
-  Batches.insert({
-    name: batchname,
-    style: style,
-    user: Meteor.user().username,
-    startDate: React.findDOMNode(this.refs.startDate).value.trim()
-  });
+  var batch = {
+  batchname : React.findDOMNode(this.refs.batchname).value.trim(),
+  style : React.findDOMNode(this.refs.style).value.trim(),
+  startDate: React.findDOMNode(this.refs.startDate).value.trim()
+};
+  Meteor.call("addBatch", batch);
 
   // Clear form
   this.clearForm();
