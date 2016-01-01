@@ -56,7 +56,7 @@ BatchSummary = React.createClass({
           <span className="timeStamp">{this.dateDifference(new Date(), new Date (this.props.batch.startDate))} Days Ago </span>
           <br/>
               <h3>
-              <ReactRouter.Link to="batch" params={{batchId: this.props.batch.user}}>{this.props.batch.name} </ReactRouter.Link>
+              <ReactRouter.Link to={`/batch/${this.props.batch._id}`}>{this.props.batch.name} </ReactRouter.Link>
               ({this.props.batch.style})</h3>
               <button className="delete" onClick={() => this.confirmDelete()}>
                 Delete

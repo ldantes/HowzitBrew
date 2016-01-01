@@ -6,7 +6,7 @@ Index = React.createClass({
   mixins: [ReactMeteorData],
   getMeteorData() {
     return {
-      batches: Batches.find({user: Meteor.user().username }, {sort: {startDate: -1}}).fetch(),
+      batches: Batches.find({}, {sort: {startDate: -1}}).fetch(),
       currentUser: Meteor.user()
 
     }
